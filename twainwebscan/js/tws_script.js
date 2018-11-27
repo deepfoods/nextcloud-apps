@@ -22,17 +22,18 @@ function scan() {
 		.ocdialog({
 			width: 500,
 			height: 310,
-			//closeOnEscape: true,
+			closeOnEscape: false,
 			modal: true,
 			open: function () {
 				$(this).parents(".oc-dialog:first").addClass("oc-scan-setting");
-			},
+			}
+			/*,
 			close: function() {
 				var _self = this;
 				setTimeout(function() {
 				  $(_self).ocdialog('destroy').remove();
 				}, 3000);
-			}
+			}*/
 		});
 }
 
@@ -86,15 +87,25 @@ function doscan()
 };
 
 $(document).ready(function() {
+	
 	$("ul#appmenu li").click(function() {
 		
-		var id = $(this).data('id');
-		console.log(id);
-		if(id == 'twainwebscan')
+		var cdir = parent.getURLParameter('dir');
+		if(cdir !=="")
 		{
-			scan();
+			var id = $(this).data('id');
+			//console.log(id);
+			if(id == 'twainwebscan')
+			{
+				scan();
+				return false;
+			}
+		}
+		else{
+			console.warn('Warning : Working only inside Files');
 			return false;
 		}
+		
 	});
 	
 	$("#scanImage").on('click', function(){
