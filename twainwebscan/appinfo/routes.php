@@ -2,9 +2,6 @@
 $this->create('twainwebscan_index', '/')
 	->actionInclude('twainwebscan/index.php');
 
-//$this->create('twainwebscan_scan', 'scan')
-//	->actionInclude('twainwebscan/scan.php');
-
 $this->create('twainwebscan_ajax_scanupload', 'ajax/scanupload.php')
 	->actionInclude('twainwebscan/ajax/scanupload.php');
 	
