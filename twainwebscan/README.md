@@ -2,7 +2,7 @@ Description
 -----------
 Scan from nextcloud
 
-![](https://raw.githubusercontent.com/deepfoods/nextcloud-apps/master/twainwebscan/img/scanwebtwain.gif)
+![](https://raw.githubusercontent.com/deepfoods/nextcloud-apps/master/twainwebscan/img/scanwebtwain-w.gif)
 
 Installation
 ------------
